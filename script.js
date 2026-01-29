@@ -86,7 +86,7 @@ document.querySelectorAll('.card-icon, .floating-icon').forEach(icon => {
     });
 });
 
-// Aggiungi in script.js
+// EASTER EGG MIMIC E DRAGO
 const dragon = document.querySelector('.loot-icon');
 if(dragon) {
     dragon.addEventListener('mouseenter', () => {
@@ -104,4 +104,62 @@ if(mimic) {
         mimic.parentElement.classList.add('mimic-shake');
         setTimeout(() => alert("🦷 AARGH! È UN MIMIC!"), 200);
     });
+}
+
+// DUNGEON MODE (TORCH EFFECT + AUDIO)
+const torchToggle = document.getElementById('torch-toggle');
+const darkness = document.getElementById('darkness-overlay');
+const body = document.body;
+
+// Carica l'audio (Link GitHub diretto "raw" per evitare blocchi CORS)
+// Suono: "Wind Howl"
+const dungeonAudio = new Audio('https://github.com/rafaelreis-hotmart/Audio-Sample-files/raw/master/sample.mp3'); 
+dungeonAudio.loop = true;  // Ripeti all'infinito
+dungeonAudio.volume = 0.5; // Volume medio
+
+// 1. Attiva/Disattiva
+if (torchToggle) {
+    torchToggle.addEventListener('click', () => {
+        body.classList.toggle('dungeon-mode');
+        
+        // Cambia icona e gestisci effetti
+        if (body.classList.contains('dungeon-mode')) {
+            // ACCESO 🔥
+            torchToggle.innerHTML = "🔥"; 
+            
+            // Attiva listener mouse
+            document.addEventListener('mousemove', moveTorch);
+            
+            // Play Audio
+            dungeonAudio.play().catch(error => {
+                console.log("Audio bloccato dal browser (errore CORS o policy):", error);
+            });
+            
+        } else {
+            // SPENTO 🕯️
+            torchToggle.innerHTML = "🕯️"; 
+            
+            // Rimuovi listener per performance
+            document.removeEventListener('mousemove', moveTorch);
+            
+            // Stop Audio e riavvolgi
+            dungeonAudio.pause();
+            dungeonAudio.currentTime = 0;
+            
+            // Resetta lo sfondo scuro
+            if(darkness) darkness.style.background = ''; 
+        }
+    });
+}
+
+// 2. Muovi la luce
+function moveTorch(e) {
+    if (!body.classList.contains('dungeon-mode') || !darkness) return;
+    
+    const x = e.clientX;
+    const y = e.clientY;
+    
+    // Aggiorna il gradiente radiale: 
+    // Trasparente al centro (mouse) -> Nero ai bordi
+    darkness.style.background = `radial-gradient(circle 200px at ${x}px ${y}px, transparent 0%, rgba(0,0,0,0.98) 100%)`;
 }

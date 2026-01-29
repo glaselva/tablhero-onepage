@@ -454,3 +454,47 @@ footer { background: #1A252F; color: #95A5A6; padding: 60px 0 20px; }
     30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
     40%, 60% { transform: translate3d(4px, 0, 0); }
 }
+
+/* Tasto Toggle */
+#torch-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10000;
+    transition: transform 0.3s;
+    background: rgba(0,0,0,0.5);
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid #fff;
+}
+#torch-toggle:hover { transform: scale(1.1); }
+
+/* L'Oscurità (Overlay) */
+#darkness-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: black; /* Base nera */
+    z-index: 9998; /* Sopra tutto, sotto il toggle */
+    pointer-events: none; /* Lascia passare i click ai link sotto! */
+    opacity: 0; /* Spento di base */
+    transition: opacity 0.5s ease;
+    
+    /* Il "buco" di luce sarà gestito via JS con variabili CSS o radial-gradient dinamico */
+    /* Fallback statico se JS fallisce: */
+    background: radial-gradient(circle at 50% 50%, transparent 100px, rgba(0,0,0,0.95) 150px);
+}
+
+/* Quando la modalità è attiva */
+body.dungeon-mode #darkness-overlay {
+    opacity: 1; /* Accendi il buio */
+}
+
+/* Cambia icona quando attivo */
+body.dungeon-mode #torch-toggle {
+    background: #E67E22; /* Arancione acceso */
+    box-shadow: 0 0 20px #E67E22;
+}
