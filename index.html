@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TableHero - Community di Gioco</title>
+    
+    <!-- Google Fonts: Oxanium (Headings) + Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Icone (Phosphor Icons o FontAwesome light) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- NAVBAR STICKY -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">TABLEHERO</div>
+            <ul class="nav-links">
+                <li><a href="#chi-siamo">Chi Siamo</a></li>
+                <li><a href="#eventi">Eventi</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+            <a href="https://whatsapp.com/..." class="btn btn-primary nav-cta">Unisciti alla Community</a>
+            <div class="mobile-menu-icon">
+                <i class="ph ph-list"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="news-ticker">
+        <div class="ticker-content">
+            <span>🔥 Prossima sessione: 15 Febbraio</span>
+            <span>🎲 Nuovi giochi: Terraforming Mars e Dune Imperium!</span>
+            <span>⚔️ Cercasi Master per campagna Cyberpunk</span>
+            <span>📅 Evento speciale Halloween in preparazione...</span>
+        </div>
+    </div>
+
+
+    <!-- HERO SECTION -->
+    <header class="hero" id="top">
+        <div class="hero-overlay"></div>
+        <!-- Placeholder immagine hero: cambia l'URL nel CSS o metti un img tag qui -->
+        <div class="hero-content reveal">
+            <div class="floating-icon icon-left">🎲</div>
+            <div class="floating-icon icon-right">⚔️</div>
+
+            <h1>La tua Quest inizia qui.</h1>
+            <p>Unisciti alla community di giocatori di Gioia del Colle. Gdr, Boardgames e nuove amicizie.</p>
+            <div class="cta-group">
+                <a href="#community" class="btn btn-primary">Unisciti alla Community</a>
+                <a href="#eventi" class="btn btn-outline">Scopri gli Eventi</a>
+            </div>
+        </div>
+        <a href="#chi-siamo" class="scroll-down">
+        <i class="ph ph-caret-double-down"></i>
+</a>
+    </header>
+
+    <!-- CHI SIAMO -->
+    <section id="chi-siamo" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Chi Siamo</h2>
+                <p class="subtitle">Siamo una community di appassionati, non solo un gruppo di gioco.</p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Mission -->
+                <div class="about-text reveal">
+                    <h3>La nostra Mission</h3>
+                    <p>Vogliamo portare il gioco da tavolo a tutti, creare connessioni reali e promuovere il "gioco pulito". Niente gatekeeping, solo dadi che rotolano e belle storie.</p>
+                    <a href="#eventi" class="text-link">Vieni al prossimo evento &rarr;</a>
+                </div>
+
+            <div class="community-stats">
+                <h4>Livello Community: <span style="color: var(--accent-secondary)">LVL 3</span></h4>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                <p class="stats-text">75 avventurieri iscritti (Obiettivo: 100 per sbloccare il Torneo!)</p>
+            </div>
+    
+
+                <!-- Spazio 25 Box -->
+                <div class="partner-box reveal">
+                    <div class="partner-content">
+                        <h3>Collaborazione con Spazio 25</h3>
+                        <p>Il nostro quartier generale fisico. Uno spazio aperto per associazioni e cultura a Gioia del Colle.</p>
+                        <a href="#contatti" class="btn btn-small">Vedi dov'è</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOUNDERS (ESAGONI) -->
+            <div class="founders-section reveal">
+                <h3>I Fondatori</h3>
+                <div class="founders-grid">
+                    <!-- Founder 1 -->
+                    <div class="founder-card">
+                        <div class="hex-image">
+                            <img src="img/founder-1.jpg" alt="Master">
+                        </div>
+                        <h4>Nome 1</h4>
+                        <span class="role">Il Master</span>
+                        <p class="superpower">Worldbuilding & Narrazione</p>
+                    </div>
+                    <!-- Founder 2 -->
+                    <div class="founder-card">
+                        <div class="hex-image">
+                            <img src="img/founder-2.jpg" alt="Game Designer">
+                        </div>
+                        <h4>Nome 2</h4>
+                        <span class="role">Game Designer</span>
+                        <p class="superpower">Regole & Bilanciamento</p>
+                    </div>
+                    <!-- Founder 3 -->
+                    <div class="founder-card">
+                        <div class="hex-image">
+                            <img src="img/founder-3.jpg" alt="Coordinatore">
+                        </div>
+                        <h4>Nome 3</h4>
+                        <span class="role">Il Coordinatore</span>
+                        <p class="superpower">Logistica & Community</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTI -->
+    <section id="eventi" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Prossimi Eventi</h2>
+                <p>Due appuntamenti mensili fissi. Scegli la tua avventura.</p>
+            </div>
+
+            <div class="events-grid">
+                <!-- CARD GDR -->
+                <div class="event-card rpg reveal">
+                    <div class="card-icon"><i class="ph ph-hexagon"></i></div> <!-- Icona D20 style -->
+                    <div class="card-image">
+                        <img src="img/gioco-di-ruolo.jpg" alt="GDR">
+                    </div>
+                    <div class="card-body">
+                        <h3>Notte di Ruolo</h3>
+                        <p class="event-desc">Immergiti in dungeon oscuri o galassie lontane. Tavoli per neofiti ed esperti.</p>
+                        <ul class="event-details">
+                            <li><i class="ph ph-calendar"></i> 15 Febbraio 2026</li>
+                            <li><i class="ph ph-clock"></i> 20:30</li>
+                            <li><i class="ph ph-ticket"></i> 5€ (gratis membri)</li>
+                        </ul>
+                        <a href="#" class="btn btn-full btn-rpg">Prenota su Eventbrite</a>
+                    </div>
+                </div>
+
+                <!-- CARD BOARDGAMES -->
+                <div class="event-card boardgame reveal">
+                    <div class="card-icon"><i class="ph ph-dice-five"></i></div>
+                    <div class="card-image">
+                        <img src="img/gioco-da-tavolo.jpg" alt="Boardgames">
+                    </div>
+                    <div class="card-body">
+                        <h3>Serata da Tavolo</h3>
+                        <p class="event-desc">Dai grandi classici ai nuovi german e party games. Spieghiamo noi le regole!</p>
+                        <ul class="event-details">
+                            <li><i class="ph ph-calendar"></i> 28 Febbraio 2026</li>
+                            <li><i class="ph ph-clock"></i> 21:00</li>
+                            <li><i class="ph ph-ticket"></i> 5€ (gratis membri)</li>
+                        </ul>
+                        <a href="#" class="btn btn-full btn-bg">Prenota su Eventbrite</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interested-cta reveal">
+                <p>Ti piace quello che vedi?</p>
+                <a href="https://whatsapp.com/..." class="btn btn-primary">Unisciti alla Community</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIANZE -->
+    <section id="testimonianze" class="section-padding">
+        <div class="container">
+            <h2 class="text-center reveal">Dicono di noi</h2>
+            <div class="testimonials-grid reveal">
+                <div class="quote-card">
+                    <p>"Finalmente un posto dove giocare di ruolo seriamente a Gioia!"</p>
+                    <cite>- Marco R.</cite>
+                </div>
+                <div class="quote-card">
+                    <p>"L'atmosfera è super accogliente, anche per chi non ha mai giocato."</p>
+                    <cite>- Elena S.</cite>
+                </div>
+                <div class="quote-card">
+                    <p>"Eventi organizzati benissimo, Spazio 25 è una chicca."</p>
+                    <cite>- Luca D.</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section-padding bg-alt">
+        <div class="container">
+            <h2 class="text-center reveal">Momenti Epici</h2>
+            <div class="gallery-grid reveal">
+                <!-- Placeholder immagini gallery -->
+                <div class="gallery-item mimic-trap">
+                    <img src="img/gallery-1.jpg" alt="Tesoro">
+                </div>
+                <div class="gallery-item"><img src="img/gallery-2.jpg" alt="Foto 2"></div>
+                <div class="gallery-item"><img src="img/gallery-3.jpg" alt="Foto 3"></div>
+                <div class="gallery-item"><img src="img/gallery-4.jpg" alt="Foto 4"></div>
+            </div>
+            <div class="center-btn">
+                <a href="https://instagram.com" class="btn btn-outline">Seguici su Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-padding">
+        <div class="container small-container reveal">
+            <h2 class="text-center">Domande Frequenti</h2>
+            <div class="faq-item">
+                <details>
+                    <summary>Devo essere esperto per partecipare?</summary>
+                    <p>Assolutamente no! Spieghiamo le regole prima di ogni sessione.</p>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>Quanto costano gli eventi?</summary>
+                    <p>Solitamente 5€ per coprire le spese, ma l'iscrizione annuale dà sconti.</p>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>Posso portare i miei giochi?</summary>
+                    <p>Certo! Scrivici prima così organizziamo i tavoli.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" class="section-padding bg-darker">
+        <div class="container contact-wrapper">
+            <div class="contact-info reveal">
+                <h2>Contattaci</h2>
+                <p>Hai dubbi? Vuoi proporre una collaborazione? Scrivici.</p>
+                
+                <ul class="contact-list">
+                    <li><i class="ph ph-envelope"></i> info@tablehero.it</li>
+                    <li><i class="ph ph-phone"></i> +39 333 000 0000</li>
+                    <li><i class="ph ph-map-pin"></i> Spazio 25, Gioia del Colle</li>
+                </ul>
+
+                <a href="https://wa.me/393330000000" class="btn btn-whatsapp">
+                    <i class="ph ph-whatsapp-logo"></i> Scrivici su WhatsApp
+                </a>
+
+                <div class="social-icons">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                </div>
+            </div>
+
+            <div class="map-widget reveal">
+                <!-- Sostituisci src con l'embed code reale di Google Maps per Spazio 25 -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3016.9!2d16.9!3d40.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM40wNDgnMDAuMCJOIDE2wrA1NCcwMC4wIkU!5e0!3m2!1sit!2sit!4v1600000000000!5m2!1sit!2sit" 
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>TableHero</h3>
+                <p>Forging adventures since 2024.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Link Rapidi</h4>
+                <ul>
+                    <li><a href="#chi-siamo">Chi Siamo</a></li>
+                    <li><a href="#eventi">Eventi</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <button id="cookie-settings-btn" class="text-link-small">Gestisci Cookie</button>
+            </div>
+        </div>
+
+        <div class="footer-loot">
+            <span class="loot-icon">💤🐉</span>
+            <p class="loot-text">Qui giace il drago del footer. Non svegliarlo.</p>
+        </div>
+
+
+        <div class="footer-bottom">
+            &copy; 2026 TableHero. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <p>Usiamo i cookie per migliorare la tua esperienza di navigazione. Accetti?</p>
+            <div class="cookie-buttons">
+                <button id="cookie-reject" class="btn btn-small btn-outline">Rifiuta</button>
+                <button id="cookie-accept" class="btn btn-small btn-primary">Accetta</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
